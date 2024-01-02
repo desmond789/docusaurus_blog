@@ -1,0 +1,5 @@
+{
+    "vscode-office.pasterImgPath": "${workspaceDir}/images/${now}.png",
+    "vscode-office.workspacePathAsImageBasePath": true,
+    "vscode-office.editorLanguage": "zh_CN"
+}
