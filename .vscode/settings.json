@@ -1,5 +1,7 @@
 {
-    "vscode-office.pasterImgPath": "${workspaceDir}/images/${now}.png",
-    "vscode-office.workspacePathAsImageBasePath": true,
-    "vscode-office.editorLanguage": "zh_CN"
+    "workbench.editorAssociations": {
+        "*.md": "cweijan.markdownViewer"
+    },
+    "vscode-office.openOutline": false,
+    "vscode-office.previewCode": false,
 }

@@ -8,8 +8,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '羅莉安的小飛龍',
-  tagline: '記錄學習過程',
+  title: '罗莉安的小飞龙',
+  tagline: '今天，也是充满希望的一天。',
   favicon: 'favicon.ico',
 
   // Set the production url of your site here
@@ -77,7 +77,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: '羅莉安的小飛龍',
+        title: '罗莉安的小飞龙',
         logo: {
           alt: 'My Site Logo',
           src: 'favicon.ico',
@@ -100,21 +100,21 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar4',
             position: 'left',
-            label: '數據庫',
+            label: '数据库',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar5',
             position: 'left',
-            label: '運維',
+            label: '运维',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar6',
             position: 'left',
-            label: '在綫工具',
+            label: '在线工具',
           },
-          { to: '/manager', label: '後臺管理', position: 'left' },
+          { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.badhydra.com',
@@ -178,7 +178,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 羅莉安的小飛龍, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 罗莉安的小飞龙, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
