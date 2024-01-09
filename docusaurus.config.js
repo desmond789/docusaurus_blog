@@ -114,7 +114,7 @@ const config = {
             position: 'left',
             label: '在线工具',
           },
-          { to: '/manager', label: '后台管理', position: 'left' },
+          // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.badhydra.com',
