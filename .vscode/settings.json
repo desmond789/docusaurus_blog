@@ -1,0 +1,7 @@
+{
+    "workbench.editorAssociations": {
+        "*.md": "cweijan.markdownViewer"
+    },
+    "vscode-office.openOutline": false,
+    "vscode-office.previewCode": false,
+}
