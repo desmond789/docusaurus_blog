@@ -100,19 +100,19 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar4',
             position: 'left',
-            label: '數據庫',
+            label: '数据库',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar5',
             position: 'left',
-            label: '運維',
+            label: '运维',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar6',
             position: 'left',
-            label: '面試',
+            label: '面试',
           },
           {
             type: 'docSidebar',
