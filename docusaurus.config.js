@@ -123,7 +123,7 @@ const config = {
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://www.badhydra.com',
+            href: 'https://github.com/desmond789/docusaurus_blog',
             label: 'GitHub',
             position: 'right',
           },
@@ -179,7 +179,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/desmond789/docusaurus_blog',
               },
             ],
           },
