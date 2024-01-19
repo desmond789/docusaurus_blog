@@ -100,19 +100,19 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar4',
             position: 'left',
-            label: '數據庫',
+            label: '数据库',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar5',
             position: 'left',
-            label: '運維',
+            label: '运维',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar6',
             position: 'left',
-            label: '面試',
+            label: '面试',
           },
           {
             type: 'docSidebar',
@@ -123,7 +123,7 @@ const config = {
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://www.badhydra.com',
+            href: 'https://github.com/desmond789/docusaurus_blog',
             label: 'GitHub',
             position: 'right',
           },
@@ -179,7 +179,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/desmond789/docusaurus_blog',
               },
             ],
           },
