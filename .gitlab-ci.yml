@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - build
+  only:
+    - test
+  script:
+    - echo "npm run build"
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 day
+
+
+deploy:
+  stage: deploy
+  tags:
+    - deploy
+  only:
+    - test
+  script:
+    - echo "hello deploy"
