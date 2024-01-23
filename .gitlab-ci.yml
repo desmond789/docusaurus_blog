@@ -1,3 +1,4 @@
+image: node:18.0		#镜像版本
 stages:
   - build
   - deploy
@@ -7,14 +8,22 @@ build:
   tags:
     - build
   only:
-    - test
+    - test			#build分支为test
   script:
-    - echo "npm run build"
+    - echo "hello docker!"
+    - pwd
+    - ls
+    - npm install		#下载包
+    - npm run build		#编译文件
+    - ls
+  cache:
+    key: "$CI_JOB_NAME"	
+    paths:
+      - node_modules/		#缓存包，避免重新下载
   artifacts:
     paths:
-      - build/
-    expire_in: 1 day
-
+      - build/			#将编译后的文件打包供下载
+    expire_in: 1 week    
 
 deploy:
   stage: deploy
@@ -24,3 +33,7 @@ deploy:
     - test
   script:
     - echo "hello deploy"
+  cache:
+    key: "$CI_JOB_NAME"	
+    paths:
+      - node_modules/		#缓存包，避免重新下载
