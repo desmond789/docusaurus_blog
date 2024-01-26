@@ -94,7 +94,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar3',
             position: 'left',
-            label: '算法',
+            label: '运维',
           },
           {
             type: 'docSidebar',
@@ -106,19 +106,19 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar5',
             position: 'left',
-            label: '运维',
+            label: '算法',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar6',
             position: 'left',
-            label: '面试',
+            label: '网络',
           },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar7',
             position: 'left',
-            label: '在线工具',
+            label: '面试',
           },
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
@@ -131,9 +131,9 @@ const config = {
       },
       //右上角显示一个目录栏
       tableOfContents: {
-        // 显示 h2 到 h5 标题
+        // 显示 h2 到 h4 标题
         minHeadingLevel: 2,
-        maxHeadingLevel: 5,
+        maxHeadingLevel: 4,
       },
       //自动折叠其他侧边栏
       docs: {
