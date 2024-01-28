@@ -106,7 +106,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar5',
             position: 'left',
-            label: '算法',
+            label: '虚拟化',
           },
           {
             type: 'docSidebar',
