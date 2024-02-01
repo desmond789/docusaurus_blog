@@ -120,6 +120,12 @@ const config = {
             position: 'left',
             label: '面试',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar8',
+            position: 'left',
+            label: '项目',
+          },
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {

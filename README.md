@@ -12,5 +12,9 @@
 * 然后进入项目根目录
 
   ```
+  npm install
+  #在线调试
   npm start
+  #编译
+  npm build
   ```
