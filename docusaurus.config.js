@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '罗莉安的小飞龙',
-  tagline: '也是充满希望的一天。不要停止学习哦~~~',
+  tagline: '今天也是充满希望的一天。不要停止学习哦~~~',
   favicon: 'favicon.ico',
 
   // Set the production url of your site here
