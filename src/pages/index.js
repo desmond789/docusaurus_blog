@@ -11,6 +11,8 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9753947777046990"
+     crossorigin="anonymous"></script>
       <div className="container">
         <Heading as="h1" className="hero__title" >
           {siteConfig.title}
