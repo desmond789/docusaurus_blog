@@ -69,11 +69,16 @@ const config = {
       },
     ],
     'plugin-image-zoom',
+    'docusaurus-plugin-google-adsense',
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      //google Adsense
+      googleAdsense: {
+        dataAdClient: "ca-pub-9753947777046990",
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -86,9 +91,15 @@ const config = {
           { to: '/', label: 'Home', position: 'left' },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar2',
+            sidebarId: 'tutorialSidebar1',
             position: 'left',
             label: 'java',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar2',
+            position: 'left',
+            label: '算法',
           },
           {
             type: 'docSidebar',
