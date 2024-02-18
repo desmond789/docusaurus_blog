@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -44,6 +46,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/desmond789/docusaurus_blog',
+          remarkPlugins: [remarkMath],
+          // rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -64,21 +68,29 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        language: ['en', 'zh'],
+        // language: ['en', 'zh'],
+        language: ['zh'],
         docsRouteBasePath: '/',
       },
     ],
     'plugin-image-zoom',
-    'docusaurus-plugin-google-adsense',
+    // 'docusaurus-plugin-google-adsense',
+    // [
+    //   'vercel-analytics',
+    //   {
+    //     debug: false,
+    //     mode: 'production',
+    //   },
+    // ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       //google Adsense
-      googleAdsense: {
-        dataAdClient: "ca-pub-9753947777046990",
-      },
+      // googleAdsense: {
+      //   dataAdClient: "ca-pub-9753947777046990",
+      // },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -88,7 +100,7 @@ const config = {
           src: 'favicon.ico',
         },
         items: [
-          { to: '/', label: 'Home', position: 'left' },
+          // { to: '/', label: 'Home', position: 'left' },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar1',
@@ -137,13 +149,31 @@ const config = {
             position: 'left',
             label: '项目',
           },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar9',
+            position: 'left',
+            label: '报错汇总',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar10',
+            position: 'left',
+            label: '外语',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar11',
+            position: 'left',
+            label: '经济学',
+          },
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/desmond789/docusaurus_blog',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   href: 'https://github.com/desmond789/docusaurus_blog',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       //右上角显示一个目录栏
