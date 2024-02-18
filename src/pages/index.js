@@ -8,17 +8,18 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9753947777046990"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4Z9PCJZ9W"></script>
       <div className="container">
         <Heading as="h1" className="hero__title" >
           {siteConfig.title}
         </Heading>
         <div>
-        <img src='favicon.ico' alt='罗莉安的小飞龙'/>
+          <img src='favicon.ico' alt='罗莉安的小飞龙' />
         </div>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -34,7 +35,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}

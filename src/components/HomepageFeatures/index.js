@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        ~该文档网站采用Docusaurus搭建和Gitlab Runner自动部署。~
+        ~该文档网站采用 Docusaurus 搭建, 使用 Github + Vercel 自动部署。~
       </>
     ),
   },
