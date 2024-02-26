@@ -14,6 +14,7 @@ function HomepageHeader() {
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9753947777046990"
         crossorigin="anonymous"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4Z9PCJZ9W"></script>
+      <script defer src="https://eu.umami.is/script.js" data-website-id="1eba1d80-6674-41a9-a6c9-24fc8ca6d44b"></script>
       <div className="container">
         <Heading as="h1" className="hero__title" >
           {siteConfig.title}
