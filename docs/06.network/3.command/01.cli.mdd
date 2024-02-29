@@ -1,0 +1,138 @@
+---
+title: 1.CLI常用命令
+---
+## 从用户视图进入系统视图
+
+语法：system-view
+
+示例：
+
+```
+# 从用户视图进入系统视图。
+<Sysname> system-view
+System View: return to User View with Ctrl+Z.
+[Sysname]
+
+#退出系统视图
+quit
+
+#从当前视图（非用户视图）直接退回到用户视图。
+return
+```
+
+## 系统定义的缺省别名
+
+表1-1 系统定义的缺省别名
+
+| 缺省别名              | 命令                  |
+| --------------------- | --------------------- |
+| **access-list** | **acl**         |
+| **end**         | **return**      |
+| **erase**       | **delete**      |
+| **exit**        | **quit**        |
+| **hostname**    | **sysname**     |
+| **logging**     | **info-center** |
+| **no**          | **undo**        |
+| **show**        | **display**     |
+| **write**       | **save**        |
+
+示例：
+
+配置命令**display ip routing-table**的别名为**shiprt**。
+
+```
+<Sysname> system-view
+[Sysname] alias shiprt display ip routing-table
+[Sysname] shiprt
+Destinations : 13        Routes : 13
+Destination/Mask   Proto   Pre Cost        NextHop         Interface
+0.0.0.0/32         Direct  0   0           127.0.0.1       InLoop0
+3.3.3.3/32         Static  60  0           192.168.1.62    Vlan1
+127.0.0.0/8        Direct  0   0           127.0.0.1       InLoop0
+......
+```
+
+## 正则过滤信息命令
+
+**display |** **{** **begin** **|** **exclude** **|** **include** **}**命令用来使用正则表达式对显示信息进行过滤。
+
+**display** **command** **|** **{** **begin** **|** **exclude** **|** **include** **}** **regular-expression**
+
+* **command**：命令关键字，取值可以通过输入?来获得。
+* **begin**：从包含正则表达式的行开始显示。
+* **exclude**：只显示不包含正则表达式的行。
+* **include**：只显示包含正则表达式的行。
+
+示例：
+
+```
+display current-configuration | include vlan	#查看包含VLAN的配置
+```
+
+### 查看带行号的显示信息
+
+**语法：display** **command** **|** **by-linenum**
+
+```
+display vlan 999 | by-linenum			#显示VLAN 999信息的同时显示行号
+```
+
+## Display相关显示
+
+### 显示历史命令
+
+```
+display history-command				#显示历史命令缓存区内保存的命令
+display history-command	all			#显示所有登录用户成功执行的历史命令
+display command > filename			#将显示信息独立保存到文件
+display command >> filename			#将显示信息追加保存到文件
+```
+
+示例：
+
+```
+<Sysname> display history-command all
+  Date       Time     Terminal   Ip              User
+  03/16/2012 20:03:33 vty0       192.168.1.26    **
+  Cmd:dis his all
+  03/16/2012 20:03:29 vty0       192.168.1.26    **
+  Cmd:s
+```
+
+参数详解：
+
+| 字段     | 描述                                                                                                                 |
+| -------- | -------------------------------------------------------------------------------------------------------------------- |
+| Date     | 执行命令行的日期                                                                                                     |
+| Time     | 执行命令行的时间                                                                                                     |
+| Terminal | 执行命令的用户使用的登录用户线                                                                                       |
+| Ip       | 执行命令的用户使用的登录IP                                                                                           |
+| User     | 如果用户使用scheme方式登录设备，该字段显示为执行命令的用户使用的登录用户名；如果使用其他方式登录设备，该字段显示为** |
+| Cmd      | 执行的命令（和用户的输入保持一致）                                                                                   |
+
+### 显示VLAN
+
+```
+display vlan 999				#显示VLAN 999信息
+```
+
+示例：
+
+```
+#保存信息
+<Sysname> display vlan 1 > vlan.txt
+#查看信息
+<Sysname> more vlan.txt
+VLAN ID: 1
+ VLAN type: Static
+ Route interface: Not configured
+ Description: VLAN 0001
+ Name: VLAN 0001
+ Tagged ports:   None
+ Untagged ports:
+    Ten-GigabitEthernet1/0/2
+```
+
+## Reference Links：
+
+https://www.h3c.com/cn/d_201707/1017423_30005_0.htm
