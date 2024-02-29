@@ -1,0 +1,87 @@
+## 权限类配置
+
+### interface policy deny
+
+**interface policy deny**命令用来进入接口策略视图。
+
+**undo interface policy deny**命令用来恢复缺省情况。
+
+```
+interface policy deny
+undo interface policy deny
+```
+
+进入接口策略视图后，如果不配置允许操作的接口列表，则用户将没有操作任何接口的权限；如果需要限制或区分用户对接口资源的使用权限，则还应该通过**permit interface**命令配置允许用户操作的接口列表。若接口策略视图中未配置允许操作的接口列表，则表示不允许用户操作所有的接口。对接口的操作指的是创建接口并进入接口视图、删除和应用接口。其中，创建和删除接口，仅针对逻辑接口。
+
+允许修改用户角色的接口策略，但修改后的策略只在被授权该角色的用户重新登录时才会生效。
+
+示例：
+
+```
+# 在用户角色role1中，进入接口策略视图，并禁止角色为role1的用户操作任何接口。
+<Sysname> system-view
+[Sysname] role name role1
+[Sysname-role-role1] interface policy deny
+[Sysname-role-role1-ifpolicy] quit
+
+# 在用户角色role1中，进入接口策略视图，允许角色为role1的用户操作接口Ten-GigabitEthernet1/0/1到Ten-GigabitEthernet1/0/4。
+<Sysname> system-view
+[Sysname] role name role1
+[Sysname-role-role1] interface policy deny
+[Sysname-role-role1-ifpolicy] permit interface ten-gigabitethernet 1/0/1 to ten-gigabitethernet 1/0/4
+```
+
+### permit interface
+
+**permit interface**命令用来配置允许用户操作的接口列表。
+
+**undo permit interface**命令用来禁止用户操作指定的或所有的接口。
+
+```
+permit interface interface-list
+undo permit interface [ interface-list ]
+```
+
+接口策略视图下未定义允许操作的接口列表，用户没有操作任何接口的权限。
+
+通过**interface policy deny**命令进入接口策略视图后，必须要通过本命令配置允许操作的接口列表，用户才能具有操作相应接口的权限。
+
+对接口的操作指的是创建并进入接口视图、删除和应用接口。其中，创建和删除接口，只针对逻辑接口。
+
+可通过多次执行此命令向接口列表中添加允许用户操作的接口。
+
+**undo permit interface**命令如果不指定**interface-list**参数，则表示禁止用户操作所有接口。
+
+修改后的接口资源控制策略对于当前已经在线的用户不生效，对于之后使用该角色登录设备的用户生效。
+
+```
+# 创建用户角色role1并进入其视图。
+<Sysname> system-view
+[Sysname] role name role1
+
+# 配置用户角色规则1，允许用户执行进入接口视图以及接口视图下的相关命令。
+[Sysname-role-role1] rule 1 permit command system-view ; interface *
+
+# 配置用户角色规则2，允许用户执行创建VLAN以及进入VLAN视图后的相关命令。
+[Sysname-role-role1] rule 2 permit command system-view ; vlan *
+
+# 配置用户角色role1仅可以对接口Ten-GigabitEthernet1/0/1以及Ten-GigabitEthernet1/0/3～ Ten-GigabitEthernet1/0/5进行操作。
+[Sysname-role-role1] interface policy deny
+[Sysname-role-role1-ifpolicy] permit interface ten-gigabitethernet 1/0/1 ten-gigabitethernet 1/0/3 to ten-gigabitethernet 1/0/5
+
+当拥有用户角色role1的用户登录设备后，可以操作接口Ten-GigabitEthernet1/0/1以及 Ten-GigabitEthernet1/0/3～Ten-GigabitEthernet1/0/5，但不能操作其它接口。
+
+配置结果验证如下：
+·     进入接口Ten-GigabitEthernet1/0/1视图。
+<Sysname> system-view
+[Sysname] interface ten-gigabitethernet 1/0/1
+[Sysname-Ten-GigabitEthernet1/0/1]
+·     将接口Ten-GigabitEthernet1/0/5加入到VLAN 10。
+<Sysname> system-view
+[Sysname] vlan 10
+[Sysname-vlan10] port ten-gigabitethernet 1/0/5
+·     无法进入接口Ten-GigabitEthernet1/0/2视图。
+<Sysname> system-view
+[Sysname] interface ten-gigabitethernet 1/0/2
+Permission denied.
+```
