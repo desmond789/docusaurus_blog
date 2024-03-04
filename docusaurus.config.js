@@ -106,12 +106,12 @@ const config = {
             position: 'left',
             label: 'java',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar2',
-            position: 'left',
-            label: '算法',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar2',
+          //   position: 'left',
+          //   label: '算法',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar3',
