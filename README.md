@@ -10,6 +10,10 @@
 * 该博客使用Docusaurus框架搭建。
 * 使用 Github + Vercel 自动部署。
 
+### 博客地址
+
+[https://badhydra.com/](https://badhydra.com/)
+
 ### 博客运行方法
 
 * 安装node
