@@ -104,7 +104,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar1',
             position: 'left',
-            label: 'java',
+            label: 'Java',
           },
           // {
           //   type: 'docSidebar',
@@ -112,6 +112,12 @@ const config = {
           //   position: 'left',
           //   label: '算法',
           // },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar2',
+            position: 'left',
+            label: 'Python',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar3',
