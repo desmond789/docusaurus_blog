@@ -142,12 +142,12 @@ const config = {
             position: 'left',
             label: '网络',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar7',
-            position: 'left',
-            label: '安全',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar7',
+          //   position: 'left',
+          //   label: '安全',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar8',
