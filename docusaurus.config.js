@@ -171,7 +171,7 @@ const config = {
             sidebarId: 'tutorialSidebar11',
             position: 'left',
             label: '外语',
-          // },
+          },
           // {
           //   type: 'docSidebar',
           //   sidebarId: 'tutorialSidebar12',
