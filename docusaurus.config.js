@@ -154,12 +154,12 @@ const config = {
             position: 'left',
             label: '面试',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar9',
-            position: 'left',
-            label: '项目',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar9',
+          //   position: 'left',
+          //   label: '项目',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar10',
@@ -171,19 +171,19 @@ const config = {
             sidebarId: 'tutorialSidebar11',
             position: 'left',
             label: '外语',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar12',
-            position: 'left',
-            label: '经济',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar13',
-            position: 'left',
-            label: '健康',
-          },
+          // },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar12',
+          //   position: 'left',
+          //   label: '经济',
+          // },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar13',
+          //   position: 'left',
+          //   label: '健康',
+          // },
           // { to: '/manager', label: '后台管理', position: 'left' },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
