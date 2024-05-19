@@ -7,6 +7,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import { Analytics } from "@vercel/analytics/react"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
